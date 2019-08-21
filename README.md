@@ -31,4 +31,9 @@ v2. Variable grid.
 To Do:
 // 1 set up git repo and localize
 // 2 set up files
-// 3
+// 3 Test and set up means of creating grid
+
+JS time!
+// Need a variable that sets grid count
+// Need a model of the grid boxes to push to dom
+// Need a function to push grid boxes to DOM gridcount times.
