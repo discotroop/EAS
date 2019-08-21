@@ -11,3 +11,13 @@ function populateGrid () {
         console.log(i);
     };
 };
+
+populateGrid();
+
+// try it with a for loop ... never using forEach again!
+for (let i = 0; i < gridContainer.children.length; i++) {
+    gridContainer.children[i].addEventListener('mouseover', (e) => {
+        let color = "black";
+        e.target.style.background = color;
+    });
+};

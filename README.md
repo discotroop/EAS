@@ -34,6 +34,9 @@ To Do:
 // 3 Test and set up means of creating grid
 
 JS time!
-// Need a variable that sets grid count
-// Need a model of the grid boxes to push to dom
-// Need a function to push grid boxes to DOM gridcount times.
+// 1. Need a variable that sets grid count
+// 2. Need a model of the grid boxes to push to dom
+// 3. Need a function to push grid boxes to DOM gridcount times.
+// 4. Need to listen for hover on boxes (google it)
+// 5. Need to respond to hover with class change/style change
+/6. Need to add css for class change. ?? /
