@@ -25,10 +25,34 @@ v1. 16x16 version
 v2. Variable grid.
 1. It should have a button to clear the current grid
 2. It should take user input to construct a new grid
-3. It should scale the inner divs to fit within a fixed box.
-3. The inner divs should change to random colors and mild opacity on hover.
+3. It should scale the gridBox's to fit within a fixed box.
+-- Optional --
+4. The gridBox's should change to random colors and mild opacity on hover.
 
-To Do:
+
+To Do: ---- v2
+1. Add buttons/menus to html
+    a. It needs to prompt user for input
+    b. It needs to set gridtemplate column to input number
+    c. It needs to set gridtemplate row to input number
+    d. It needs to muliply input number times input number
+    e. It needs to call populateGrid() with mulitiplied input number
+2. Style everything.
+    a. line up button(s)
+    b. set colors for site
+    c. pick font(s)
+    d. push container divs to appropriate places. 
+3. Options: 
+    a. Add randomized colors instead of black.
+    b. Start colors at low opacity and add 10% black at each pass
+    c. *my idea* have color fade out over time... leaving a trail behind mouse.
+
+
+
+
+
+
+To Do: --- V1
 // 1 set up git repo and localize
 // 2 set up files
 // 3 Test and set up means of creating grid
