@@ -1,4 +1,8 @@
-#grid-container {
+p {
+    color: red;
+  }
+  
+  #grid-container {
     background-color: lightgray;
     display: grid;
     /* will have to target below to change css as column number changes */
@@ -11,16 +15,13 @@
     border-style: solid;
     margin: 5px;
     padding: 5px;
-}
-
-.gridBox {
+  }
+  
+  .gridBox {
     background-color: white;
     border-width: 1px;
     border-color: black;
     border-style: solid;
     padding: 1px;
-}
-
-.gridBoxHover {
-    background-color: red;
-}
+  }
+  

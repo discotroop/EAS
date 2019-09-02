@@ -1,35 +1,80 @@
-let gridContainer = document.querySelector("#grid-container")
+// This is minimum viable correct
 
-let gridBox = document.createElement('div');
-gridBox.setAttribute('class', 'gridBox');
+// Can still do some styling and random color generation.
 
-let newGridClick =  document.querySelector("button");
-newGridClick.addEventListener('click', newGrid());
+// 1. style layout
+  // a. colors
+  // b. fonts
+  // c. add addtional text
+  // d. shrink or remove squares borders
 
-function populateGrid (num) {
-    let i = 0;
-    while (i < num) {
-        gridContainer.appendChild(gridBox.cloneNode());
-        i++
-    };
-};
+// 2. add random color generation
+  // should be simple enough function to append to      // the cue
 
-populateGrid(256);
+// 3. add fade out as tracer on pen
 
-function newGrid () {
-    var gridWall = parseInt(window.prompt("How long do you want each side to be?","1"),10); 
-};
+// 4. clean up and organize the code... it's all whacky and universally declared right now.
+    //a. get it into functions
+    //b. get it into objects
 
-//https://github.com/nihirag/etch-a-sketch/blob/master/script.js
+// side the next lesson in odin is on objects :P
 
+let gridContainer = document.querySelector("#grid-container");
 
+let gridBox = document.createElement("div");
+gridBox.setAttribute("class", "gridBox");
+
+let gridCount = document.querySelector("#gridCount");
+
+function populateGrid(num) {
+  let total = num * num;
+  let i = 0;
+  while (i < total) {
+    gridContainer.appendChild(gridBox.cloneNode());
+    i++;
+  }
+}
+
+populateGrid(16);
+// Why is the grid not scaling?
+// need to make #grid-container dynamic.
 
 // try it with a for loop ... never using forEach again!
-for (let i = 0; i < gridContainer.children.length; i++) {
-    gridContainer.children[i].addEventListener('mouseover', (e) => {
-        let color = "black";
-        e.target.style.background = color;
+// for (let i = 0; i < gridContainer.children.length; i++) {
+//   gridContainer.children[i].addEventListener("mouseover", e => {
+//     let color = "black";
+//     e.target.style.background = color;
+//   });
+// }
+function deleteGrid () {
+  let children = gridContainer.lastElementChild;
+  while (children) {
+    gridContainer.remove(children);
+    children = gridContainer.lastElementChild;
+  }
+}
+
+
+// Need to clean up the code but it's working.
+
+gridCount.addEventListener("click", e => {
+  gridContainer.innerHTML = "";
+  let gridCountNumber = window.prompt("How many rows would you like", "1");
+  gridContainer.style.backgroundColor = "red";
+  gridContainer.style.gridTemplateColumns = `repeat(${gridCountNumber}, 1fr)`;
+    gridContainer.style.gridTemplateRows = `repeat(${gridCountNumber}, 1fr)`;
+  populateGrid(gridCountNumber);
+  setHoverEvent();
+});
+
+function setHoverEvent() {
+  for (let i = 0; i < gridContainer.children.length; i++) {
+    gridContainer.children[i].addEventListener("mouseover", e => {
+      let color = "black";
+      e.target.style.background = color;
     });
-};
+  }
+}
+
 
 
